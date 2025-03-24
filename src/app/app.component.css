@@ -1,0 +1,8 @@
+.rating-container {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  width: max-content;
+  display: inline-block;
+  margin-top: 20px;
+}

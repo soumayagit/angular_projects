@@ -1,0 +1,11 @@
+<div class="star-rating">
+  <span
+    *ngFor="let star of stars; let i = index"
+    (click)="updateRating(i + 1)"
+    (mouseover)="hoverRating(i + 1)"
+    (mouseleave)="clearHover()"
+    [class.filled]="i < currentRating || i < hoveredRating"
+    class="star">
+    ★
+  </span>
+</div>
