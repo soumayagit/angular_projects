@@ -4,4 +4,57 @@
   <div class="rating-container">
     <p style="font-size: 20px; font-weight: bold; color: black;">⭐ Note sélectionnée : {{ rating }}</p>
   </div>
+<!--  <img [src]="imageUrl" alt="Image dynamique">-->
+  <button (click)="onClick()" style="margin-top: 20px;">Cliquez-moi</button>
+  <p>{{ message }}</p>
+ <!-- <h2>Liste des utilisateurs</h2>
+  <ul>
+    <li *ngFor="let user of users">{{ user.name }}</li>
+  </ul>-->
+
+  <h2 style="color: blue;">Liste des utilisateurs</h2>
+  <app-generic-table
+    [data]="userData"
+    [columns]="userColumns"
+    [pageSize]="3">
+  </app-generic-table>
+
+<!--  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    style="margin-top: 40px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; width: 100%; max-width: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+  >
+    <div style="margin-bottom: 15px; text-align: left; width: 100%;">
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Nom d'utilisateur :</label>
+      <input
+        type="text"
+        formControlName="username"
+        style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"
+      />
+      <div *ngIf="form.get('username')?.invalid && form.get('username')?.touched">
+        <small style="color: red;">Ce champ est requis.</small>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 15px; text-align: left; width: 100%;">
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Email :</label>
+      <input
+        type="email"
+        formControlName="email"
+        style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"
+      />
+      <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <small *ngIf="form.get('email')?.errors?.['required']" style="color: red;">Email requis.</small>
+        <small *ngIf="form.get('email')?.errors?.['email']" style="color: red;">Format invalide.</small>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"
+    >
+      Envoyer
+    </button>
+  </form>-->
 </div>

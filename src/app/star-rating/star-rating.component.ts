@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';// tableau de 5 étoiles // commentaire soumaya
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,7 +15,7 @@ export class StarRatingComponent {
   hoveredRating: number = 0;
 
   get stars(): number[] {
-    return Array(5).fill(0); // tableau de 5 étoiles //
+    return Array(5).fill(0); // tableau de 5 étoiles // commentaire soumaya
   }
 
   updateRating(newRating: number): void {
